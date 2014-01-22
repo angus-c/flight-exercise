@@ -6,8 +6,8 @@ define(function (require) {
    * Module dependencies
    */
 
-  var Switch = require('component/switch'),
-      KeyboardShortcuts = require('bower_components/flight-keyboard-shortcuts/lib/keyboard-shortcuts');
+  var Switch = require('component/switch');
+  var KeyboardShortcuts = require('flight-keyboard-shortcuts/lib/keyboard-shortcuts');
 
   /**
    * Module exports
@@ -31,7 +31,7 @@ define(function (require) {
       }
     });
 
-    Switch.attachTo("#onoff");
+    Switch.attachTo('#switch');
   }
 
 });
