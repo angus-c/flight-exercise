@@ -22,7 +22,7 @@ npm run watch
 ```
 
 Alternatively, the server (which is a local installation of
-[node-static](https://github.com/cloudhead/node-static/)) and can be run on its
+[node-static](https://github.com/cloudhead/node-static/)) can be run on its
 own:
 
 ```

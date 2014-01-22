@@ -11,8 +11,7 @@ describeComponent('component/switcher', function () {
     expect(this.component).toBeDefined();
   });
 
-  //click tests
-  it('should toggle on and off state on click', function () {
+  it('should toggle on and off state', function () {
     expect(this.component.$node).not.toHaveClass(this.component.attr.onClass);
     this.component.$node.trigger('click');
     expect(this.component.$node).toHaveClass(this.component.attr.onClass);
@@ -20,7 +19,7 @@ describeComponent('component/switcher', function () {
     expect(this.component.$node).not.toHaveClass(this.component.attr.onClass);
   });
 
-  it('should toggle firing of enabled and disabled events on click', function () {
+  it('should toggle firing of buttonOn and buttonOff events', function () {
     expect(this.component.$node).not.toHaveClass(this.component.attr.onClass);
 
     spyOnEvent(this.component.$node, 'buttonOn');
