@@ -20,21 +20,21 @@ define(function (require) {
 
   function Switch() {
     this.defaultAttrs({
-
+      onClass: 'btn-primary'
     });
 
     this.turnOn = function() {
-      this.$node.addClass('on');
+      this.$node.addClass(this.attr.onClass);
       this.trigger('buttonOn');
     };
 
     this.turnOff = function() {
-      this.$node.removeClass('on');
+      this.$node.removeClass(this.attr.onClass);
       this.trigger('buttonOff');
     };
 
     this.toggle = function() {
-      if (this.$node.hasClass('on')) {
+      if (this.$node.hasClass(this.attr.onClass)) {
         this.turnOff();
       } else {
         this.turnOn();

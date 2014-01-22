@@ -1,11 +1,7 @@
-button {
-  position: absolute;
-  left: 100px;
-  top: 100px;
-  width: 100px;
-  height: 30px;
+body {
+  padding-top: 50px;
 }
 
-button.on {
-  background-color: #3618e3;
+.btn {
+  transition: all 0.2s;
 }

@@ -13,15 +13,15 @@ describeComponent('component/switch', function () {
 
   //click tests
   it('should toggle on and off state on click', function () {
-    expect(this.component.$node).not.toHaveClass('on');
+    expect(this.component.$node).not.toHaveClass(this.component.attr.onClass);
     this.component.$node.trigger('click');
-    expect(this.component.$node).toHaveClass('on');
+    expect(this.component.$node).toHaveClass(this.component.attr.onClass);
     this.component.$node.trigger('click');
-    expect(this.component.$node).not.toHaveClass('on');
+    expect(this.component.$node).not.toHaveClass(this.component.attr.onClass);
   });
 
   it('should toggle firing of enabled and disabled events on click', function () {
-    expect(this.component.$node).not.toHaveClass('on');
+    expect(this.component.$node).not.toHaveClass(this.component.attr.onClass);
 
     spyOnEvent(this.component.$node, 'buttonOn');
     spyOnEvent(this.component.$node, 'buttonOff');
