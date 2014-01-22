@@ -1,4 +1,4 @@
-# flight-testies2
+# flight-excercise
 
 ## Contributing to this project
 
