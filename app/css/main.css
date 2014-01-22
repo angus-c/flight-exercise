@@ -1,1 +1,11 @@
+button {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  width: 100px;
+  height: 30px;
+}
 
+button.on {
+  background-color: #3618e3;
+}

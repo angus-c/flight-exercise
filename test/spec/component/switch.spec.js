@@ -11,27 +11,26 @@ describeComponent('component/switch', function () {
     expect(this.component).toBeDefined();
   });
 
-  it('should toggle on and off state', function () {
-    expect(this.component.$node).not.toHaveClass('enabled');
+  //click tests
+  it('should toggle on and off state on click', function () {
+    expect(this.component.$node).not.toHaveClass('on');
     this.component.$node.trigger('click');
-    expect(this.component.$node).toHaveClass('enabled');
+    expect(this.component.$node).toHaveClass('on');
     this.component.$node.trigger('click');
-    expect(this.component.$node).not.toHaveClass('enabled');
+    expect(this.component.$node).not.toHaveClass('on');
   });
 
-  it('should fire enabled and disabled events as toggled', function () {
-    expect(this.component.$node).not.toHaveClass('enabled');
+  it('should toggle firing of enabled and disabled events on click', function () {
+    expect(this.component.$node).not.toHaveClass('on');
 
-    spyOnEvent(this.component.$node, 'enabled');
-    spyOnEvent(this.component.$node, 'disabled');
-
-    this.component.$node.trigger('click');
-
-    expect('enabled').toHaveBeenTriggeredOn(this.component.$node);
+    spyOnEvent(this.component.$node, 'buttonOn');
+    spyOnEvent(this.component.$node, 'buttonOff');
 
     this.component.$node.trigger('click');
+    expect('buttonOn').toHaveBeenTriggeredOn(this.component.$node);
 
-    expect('disabled').toHaveBeenTriggeredOn(this.component.$node);
+    this.component.$node.trigger('click');
+    expect('buttonOff').toHaveBeenTriggeredOn(this.component.$node);
   });
 
 });

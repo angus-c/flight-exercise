@@ -22,12 +22,8 @@ define(function (require) {
   function initialize() {
     KeyboardShortcuts.attachTo(document, {
       shortcuts: {
-        'o': [{
-          eventName: 'requestEnable'
-        }],
-        'f': [{
-          eventName: 'requestDisable'
-        }]
+        'o': 'requestOn',
+        'f': 'requestOff'
       }
     });
 

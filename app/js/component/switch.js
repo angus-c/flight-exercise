@@ -23,28 +23,28 @@ define(function (require) {
 
     });
 
-    this.enable = function() {
-      this.$node.addClass('enabled');
-      this.trigger('enabled');
+    this.turnOn = function() {
+      this.$node.addClass('on');
+      this.trigger('buttonOn');
     };
 
-    this.disable = function() {
-      this.$node.removeClass('enabled');
-      this.trigger('disabled');
+    this.turnOff = function() {
+      this.$node.removeClass('on');
+      this.trigger('buttonOff');
     };
 
     this.toggle = function() {
-      if (this.$node.hasClass('enabled')) {
-        this.disable();
+      if (this.$node.hasClass('on')) {
+        this.turnOff();
       } else {
-        this.enable();
+        this.turnOn();
       }
     }
 
     this.after('initialize', function () {
       this.on('click', this.toggle);
-      this.on(document, 'requestEnable', this.enable);
-      this.on(document, 'requestDisable', this.disable);
+      this.on(document, 'requestOn', this.turnOn);
+      this.on(document, 'requestOff', this.turnOff);
     });
   }
 
