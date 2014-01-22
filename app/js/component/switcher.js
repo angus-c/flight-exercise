@@ -12,13 +12,13 @@ define(function (require) {
    * Module exports
    */
 
-  return defineComponent(Switch);
+  return defineComponent(switcher);
 
   /**
    * Module function
    */
 
-  function Switch() {
+  function switcher() {
     this.defaultAttrs({
       onClass: 'btn-primary'
     });

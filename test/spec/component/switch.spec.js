@@ -1,6 +1,6 @@
 'use strict';
 
-describeComponent('component/switch', function () {
+describeComponent('component/switcher', function () {
 
   // Initialize the component and attach it to the DOM
   beforeEach(function () {

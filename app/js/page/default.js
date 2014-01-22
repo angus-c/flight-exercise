@@ -6,7 +6,7 @@ define(function (require) {
    * Module dependencies
    */
 
-  var Switch = require('component/switch');
+  var Switcher = require('component/switcher');
   var KeyboardShortcuts = require('flight-keyboard-shortcuts/lib/keyboard-shortcuts');
 
   /**
@@ -27,7 +27,7 @@ define(function (require) {
       }
     });
 
-    Switch.attachTo('#switch');
+    Switcher.attachTo('#switch');
   }
 
 });
