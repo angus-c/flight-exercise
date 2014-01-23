@@ -5,7 +5,7 @@
     "flight": "~1.1.0",
     "requirejs": "~2.1.5",
     "components-bootstrap": "~3.0.0",
-    "flight-keyboard-shortcuts": "master"
+    "flight-keyboard-shortcuts": "0.0.3"
   },
   "devDependencies": {
     "jasmine-flight": "~2.2.0"
