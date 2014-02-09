@@ -24,27 +24,21 @@ define(function (require) {
     });
 
     this.turnOn = function() {
-      this.$node.addClass(this.attr.onClass);
-      this.trigger('buttonOn');
+      // 1) add class `this.attr.onClass`
+      // 2) trigger 'buttonOn' event
     };
 
     this.turnOff = function() {
-      this.$node.removeClass(this.attr.onClass);
-      this.trigger('buttonOff');
+      // 3) remove class `this.attr.onClass`
+      // 4) trigger 'buttonOff' event
     };
 
     this.toggle = function() {
-      if (this.$node.hasClass(this.attr.onClass)) {
-        this.turnOff();
-      } else {
-        this.turnOn();
-      }
+      // 5) if `this.attr.onClass` is present call `turnOff` otherwise call `turnOn`
     }
 
     this.after('initialize', function () {
-      this.on('click', this.toggle);
-      this.on(document, 'requestOn', this.turnOn);
-      this.on(document, 'requestOff', this.turnOff);
+      // 6) listen for 'click' event and call `this.toggle`
     });
   }
 

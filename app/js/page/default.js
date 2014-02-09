@@ -7,7 +7,6 @@ define(function (require) {
    */
 
   var Switcher = require('component/switcher');
-  var KeyboardShortcuts = require('flight-keyboard-shortcuts/lib/keyboard-shortcuts');
 
   /**
    * Module exports
@@ -20,14 +19,7 @@ define(function (require) {
    */
 
   function initialize() {
-    KeyboardShortcuts.attachTo(document, {
-      shortcuts: {
-        'o': 'requestOn',
-        'f': 'requestOff'
-      }
-    });
-
-    Switcher.attachTo('#switch');
+    // 1) attach `Switcher` constructor to the toggle button
   }
 
 });

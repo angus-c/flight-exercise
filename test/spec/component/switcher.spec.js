@@ -14,19 +14,19 @@ describeComponent('component/switcher', function () {
   it('should toggle on and off state', function () {
     expect(this.component.$node).not.toHaveClass(this.component.attr.onClass);
     this.component.$node.trigger('click');
-    expect(this.component.$node).toHaveClass(this.component.attr.onClass);
-    this.component.$node.trigger('click');
-    expect(this.component.$node).not.toHaveClass(this.component.attr.onClass);
+    // 1) test that the component node now has the onClass
+    // 2) simulate another click
+    // 3) test that the component node no longer has the onClass
   });
 
   it('should toggle firing of buttonOn and buttonOff events', function () {
     spyOnEvent(this.component.$node, 'buttonOn');
-    this.component.$node.trigger('click');
+    // 4) simulate a click
     expect('buttonOn').toHaveBeenTriggeredOn(this.component.$node);
 
-    spyOnEvent(this.component.$node, 'buttonOff');
-    this.component.$node.trigger('click');
-    expect('buttonOff').toHaveBeenTriggeredOn(this.component.$node);
+    // 5) spy on button off event
+    // 6) simulate another click
+    // 7) test that 'buttonOff' event had been triggered
   });
 
 });
