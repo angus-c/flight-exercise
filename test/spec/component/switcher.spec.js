@@ -21,12 +21,8 @@ describeComponent('component/switcher', function () {
 
   it('should toggle firing of buttonOn and buttonOff events', function () {
     spyOnEvent(this.component.$node, 'buttonOn');
-    // 4) simulate a click
+    this.component.$node.trigger('click');
     expect('buttonOn').toHaveBeenTriggeredOn(this.component.$node);
 
-    // 5) spy on button off event
-    // 6) simulate another click
-    // 7) test that 'buttonOff' event had been triggered
-  });
-
+    // 4) click and test 'buttonOff' event is triggered
 });
