@@ -1,4 +1,4 @@
-# Contributing to testies2
+# Contributing to flight-excercise
 
 Please take a moment to review this document in order to make the contribution
 process easy and effective for everyone involved.
